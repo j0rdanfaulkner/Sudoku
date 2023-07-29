@@ -1347,6 +1347,7 @@
             btnA2.Size = new Size(64, 64);
             btnA2.TabIndex = 1;
             btnA2.UseVisualStyleBackColor = false;
+            btnA2.Click += btnA2_Click;
             // 
             // btnA1
             // 
@@ -1412,6 +1413,7 @@
             btn9.TabIndex = 8;
             btn9.Text = "9";
             btn9.UseVisualStyleBackColor = false;
+            btn9.Click += btn9_Click;
             // 
             // btn8
             // 
@@ -1427,6 +1429,7 @@
             btn8.TabIndex = 7;
             btn8.Text = "8";
             btn8.UseVisualStyleBackColor = false;
+            btn8.Click += btn8_Click;
             // 
             // btn7
             // 
@@ -1442,6 +1445,7 @@
             btn7.TabIndex = 6;
             btn7.Text = "7";
             btn7.UseVisualStyleBackColor = false;
+            btn7.Click += btn7_Click;
             // 
             // btn6
             // 
@@ -1457,6 +1461,7 @@
             btn6.TabIndex = 5;
             btn6.Text = "6";
             btn6.UseVisualStyleBackColor = false;
+            btn6.Click += btn6_Click;
             // 
             // btn5
             // 
@@ -1472,6 +1477,7 @@
             btn5.TabIndex = 4;
             btn5.Text = "5";
             btn5.UseVisualStyleBackColor = false;
+            btn5.Click += btn5_Click;
             // 
             // btn4
             // 
@@ -1487,6 +1493,7 @@
             btn4.TabIndex = 3;
             btn4.Text = "4";
             btn4.UseVisualStyleBackColor = false;
+            btn4.Click += btn4_Click;
             // 
             // btn3
             // 
@@ -1502,6 +1509,7 @@
             btn3.TabIndex = 2;
             btn3.Text = "3";
             btn3.UseVisualStyleBackColor = false;
+            btn3.Click += btn3_Click;
             // 
             // btn2
             // 
@@ -1517,6 +1525,7 @@
             btn2.TabIndex = 1;
             btn2.Text = "2";
             btn2.UseVisualStyleBackColor = false;
+            btn2.Click += btn2_Click;
             // 
             // btn1
             // 
@@ -1541,6 +1550,7 @@
             Font = new Font("EurostileNextLTW04-UltLtEx", 20.25F, FontStyle.Regular, GraphicsUnit.Point);
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "MainWindow";
+            Text = "Sudoku";
             pnlContainer.ResumeLayout(false);
             pnlGameArea.ResumeLayout(false);
             pnlTopBar.ResumeLayout(false);

@@ -15,6 +15,7 @@ namespace Sudoku
         public void StartGame()
         {
             CreateSpaces();
+            _activeSpaceID = "";
         }
         private void CreateSpaces()
         {
@@ -109,52 +110,140 @@ namespace Sudoku
             spaces[7, 8] = btnI8;
             spaces[8, 8] = btnI9;
         }
+        private void SetSelectedSpace(string spaceID)
+        {
+            _activeSpaceID = spaceID;
+        }
         private Button FindSpace(string name)
         {
             int i;
             int j;
             for (i = 0; i < 9; i++)
             {
-                for (j = 0;  j < 9; j++)
+                for (j = 0; j < 9; j++)
                 {
                     string id = spaces[i, j].Name.ToString();
                     if (name == id)
                     {
-                        return spaces[i,j];
+                        return spaces[i, j];
                     }
                 }
             }
             return null;
         }
-        public void GetSelectedSpace(string spaceID, string number)
+        private void FillSpaceWithNumber(string number)
         {
-            string buttonName = string.Format("btn{0}", spaceID);
-            Control btnSpace = FindSpace(buttonName);
-            btnSpace.Text = number;
-        }
-        public void SetSelectedSpace(string spaceID)
-        {
-            _activeSpaceID = spaceID;
-
-        }
-
-        private void btnA1_Click(object sender, EventArgs e)
-        {
-            SetSelectedSpace("A1");
-            btnA1.BackColor = _activeSpaceBackColour;
-            btnA1.Enabled = false;
+            if (_activeSpaceID == null)
+            {
+                MessageBox.Show("You must choose a space to fill before selecting a number", "Space Not Selected", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+                string buttonName = string.Format("btn{0}", _activeSpaceID);
+                Control btnSpace = FindSpace(buttonName);
+                btnSpace.Text = number;
+                btnSpace.Enabled = true;
+                SetSelectedSpace("");
+            }
         }
 
         private void btn1_Click(object sender, EventArgs e)
         {
-            if (_activeSpaceID == null)
-            {
+            FillSpaceWithNumber("1");
+        }
 
+        private void btn2_Click(object sender, EventArgs e)
+        {
+            FillSpaceWithNumber("2");
+        }
+
+        private void btn3_Click(object sender, EventArgs e)
+        {
+            FillSpaceWithNumber("3");
+        }
+
+        private void btn4_Click(object sender, EventArgs e)
+        {
+            FillSpaceWithNumber("4");
+        }
+
+        private void btn5_Click(object sender, EventArgs e)
+        {
+            FillSpaceWithNumber("5");
+        }
+
+        private void btn6_Click(object sender, EventArgs e)
+        {
+            FillSpaceWithNumber("6");
+        }
+
+        private void btn7_Click(object sender, EventArgs e)
+        {
+            FillSpaceWithNumber("7");
+        }
+
+        private void btn8_Click(object sender, EventArgs e)
+        {
+            FillSpaceWithNumber("8");
+        }
+
+        private void btn9_Click(object sender, EventArgs e)
+        {
+            FillSpaceWithNumber("9");
+        }
+        private void btnA1_Click(object sender, EventArgs e)
+        {
+            if (_activeSpaceID != "")
+            {
+                MessageBox.Show("You are already filling another space", "Space Already Selected", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else
             {
-                GetSelectedSpace(_activeSpaceID, "1");
-                _activeSpaceID = "";
+                if (btnA1.Text != "")
+                {
+                    DialogResult result = MessageBox.Show("Are you sure you want to overwrite this space?", "Space Already Filled", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                    if (result == DialogResult.Yes)
+                    {
+                        btnA1.Text = "";
+                        SetSelectedSpace("A1");
+                        btnA1.BackColor = _activeSpaceBackColour;
+                        btnA1.Enabled = false;
+                    }
+                }
+                else
+                {
+                    SetSelectedSpace("A1");
+                    btnA1.BackColor = _activeSpaceBackColour;
+                    btnA1.Enabled = false;
+                }
+            }
+        }
+
+        private void btnA2_Click(object sender, EventArgs e)
+        {
+            if (_activeSpaceID != "")
+            {
+                MessageBox.Show("You are already filling another space", "Space Already Selected", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+                if (btnA2.Text != "")
+                {
+                    DialogResult result = MessageBox.Show("Are you sure you want to overwrite this space?", "Space Already Filled", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                    if (result == DialogResult.Yes)
+                    {
+                        btnA2.Text = "";
+                        SetSelectedSpace("A2");
+                        btnA2.BackColor = _activeSpaceBackColour;
+                        btnA2.Enabled = false;
+                    }
+                }
+                else
+                {
+                    SetSelectedSpace("A2");
+                    btnA2.BackColor = _activeSpaceBackColour;
+                    btnA2.Enabled = false;
+                }
             }
         }
     }
