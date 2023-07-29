@@ -4,9 +4,11 @@ namespace Sudoku
 {
     public partial class MainWindow : Form
     {
-        private Color _activeSpaceBackColour = Color.DarkGray;
+        private Color _activeSpace = Color.LightSkyBlue;
+        private Color _generatedSpace = Color.DarkGray;
         private string _activeSpaceID = default!;
         private Button[,] spaces = new Button[9, 9];
+        private string[,] board = new string[9, 9];
         public MainWindow()
         {
             InitializeComponent();
@@ -15,6 +17,7 @@ namespace Sudoku
         public void StartGame()
         {
             CreateSpaces();
+            GenerateGame();
             _activeSpaceID = "";
         }
         private void CreateSpaces()
@@ -109,6 +112,33 @@ namespace Sudoku
             spaces[6, 8] = btnI7;
             spaces[7, 8] = btnI8;
             spaces[8, 8] = btnI9;
+        }
+        private void GenerateGame()
+        {
+            board[0, 0] = "5";
+            board[1, 0] = "3";
+            board[5, 0] = "7";
+            board[0, 1] = "6";
+            board[3, 1] = "1";
+            board[4, 1] = "9";
+            board[5, 1] = "5";
+            board[2, 2] = "9";
+            board[3, 2] = "8";
+            board[7, 2] = "6";
+            int i;
+            int j;
+            for (i = 0; i < 9; i++)
+            {
+                for (j = 0; j < 9; j++)
+                {
+                    if (board[i, j] != null)
+                    {
+                        spaces[i, j].BackColor = _generatedSpace;
+                        spaces[i, j].Text = board[i, j];
+                        spaces[i, j].Enabled = false;
+                    }
+                }
+            }
         }
         private void SetSelectedSpace(string spaceID)
         {
@@ -206,14 +236,14 @@ namespace Sudoku
                     {
                         btn.Text = "";
                         SetSelectedSpace(btn.Name);
-                        btn.BackColor = _activeSpaceBackColour;
+                        btn.BackColor = _activeSpace;
                         btn.Enabled = false;
                     }
                 }
                 else
                 {
                     SetSelectedSpace(btn.Name);
-                    btn.BackColor = _activeSpaceBackColour;
+                    btn.BackColor = _activeSpace;
                     btn.Enabled = false;
                 }
             }
