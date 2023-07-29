@@ -1477,6 +1477,7 @@
             btnSubmit.TabIndex = 9;
             btnSubmit.Text = "a";
             btnSubmit.UseVisualStyleBackColor = false;
+            btnSubmit.Click += btnSubmit_Click;
             // 
             // btn9
             // 

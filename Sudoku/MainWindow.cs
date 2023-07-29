@@ -668,5 +668,10 @@ namespace Sudoku
         {
             CheckSpace(btnI9);
         }
+
+        private void btnSubmit_Click(object sender, EventArgs e)
+        {
+            // check spaces values against gameboard values
+        }
     }
 }
