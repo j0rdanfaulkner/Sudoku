@@ -1361,6 +1361,7 @@
             btnA1.Size = new Size(64, 64);
             btnA1.TabIndex = 0;
             btnA1.UseVisualStyleBackColor = false;
+            btnA1.Click += btnA1_Click;
             // 
             // pnlTopBar
             // 
@@ -1531,6 +1532,7 @@
             btn1.TabIndex = 0;
             btn1.Text = "1";
             btn1.UseVisualStyleBackColor = false;
+            btn1.Click += btn1_Click;
             // 
             // MainWindow
             // 
