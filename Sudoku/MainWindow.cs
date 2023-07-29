@@ -1,5 +1,3 @@
-using System.Diagnostics.Eventing.Reader;
-
 namespace Sudoku
 {
     public partial class MainWindow : Form
@@ -117,14 +115,34 @@ namespace Sudoku
         {
             board[0, 0] = "5";
             board[1, 0] = "3";
-            board[5, 0] = "7";
+            board[4, 0] = "7";
             board[0, 1] = "6";
             board[3, 1] = "1";
             board[4, 1] = "9";
             board[5, 1] = "5";
-            board[2, 2] = "9";
-            board[3, 2] = "8";
+            board[1, 2] = "9";
+            board[2, 2] = "8";
             board[7, 2] = "6";
+            board[0, 3] = "8";
+            board[4, 3] = "6";
+            board[8, 3] = "3";
+            board[0, 4] = "4";
+            board[3, 4] = "8";
+            board[5, 4] = "3";
+            board[8, 4] = "1";
+            board[0, 5] = "7";
+            board[4, 5] = "2";
+            board[8, 5] = "6";
+            board[1, 6] = "6";
+            board[6, 6] = "2";
+            board[7, 6] = "8";
+            board[3, 7] = "4";
+            board[4, 7] = "1";
+            board[5, 7] = "9";
+            board[8, 7] = "5";
+            board[4, 8] = "8";
+            board[7, 8] = "7";
+            board[8, 8] = "9";
             int i;
             int j;
             for (i = 0; i < 9; i++)
@@ -170,7 +188,7 @@ namespace Sudoku
             else
             {
                 string buttonName = _activeSpaceID;
-                Control btn = FindSpace(buttonName);
+                Button btn = FindSpace(buttonName);
                 btn.Text = number;
                 btn.Enabled = true;
                 SetSelectedSpace("");
@@ -289,6 +307,366 @@ namespace Sudoku
         private void btnA9_Click(object sender, EventArgs e)
         {
             CheckSpace(btnA9);
+        }
+
+        private void btnB1_Click(object sender, EventArgs e)
+        {
+            CheckSpace(btnB1);
+        }
+
+        private void btnB2_Click(object sender, EventArgs e)
+        {
+            CheckSpace(btnB2);
+        }
+
+        private void btnB3_Click(object sender, EventArgs e)
+        {
+            CheckSpace(btnB3);
+        }
+
+        private void btnB4_Click(object sender, EventArgs e)
+        {
+            CheckSpace(btnB4);
+        }
+
+        private void btnB5_Click(object sender, EventArgs e)
+        {
+            CheckSpace(btnB5);
+        }
+
+        private void btnB6_Click(object sender, EventArgs e)
+        {
+            CheckSpace(btnB6);
+        }
+
+        private void btnB7_Click(object sender, EventArgs e)
+        {
+            CheckSpace(btnB7);
+        }
+
+        private void btnB8_Click(object sender, EventArgs e)
+        {
+            CheckSpace(btnB8);
+        }
+
+        private void btnB9_Click(object sender, EventArgs e)
+        {
+            CheckSpace(btnB9);
+        }
+
+        private void btnC1_Click(object sender, EventArgs e)
+        {
+            CheckSpace(btnC1);
+        }
+
+        private void btnC2_Click(object sender, EventArgs e)
+        {
+            CheckSpace(btnC2);
+        }
+
+        private void btnC3_Click(object sender, EventArgs e)
+        {
+            CheckSpace(btnC3);
+        }
+
+        private void btnC4_Click(object sender, EventArgs e)
+        {
+            CheckSpace(btnC4);
+        }
+
+        private void btnC5_Click(object sender, EventArgs e)
+        {
+            CheckSpace(btnC5);
+        }
+
+        private void btnC6_Click(object sender, EventArgs e)
+        {
+            CheckSpace(btnC6);
+        }
+
+        private void btnC7_Click(object sender, EventArgs e)
+        {
+            CheckSpace(btnC7);
+        }
+
+        private void btnC8_Click(object sender, EventArgs e)
+        {
+            CheckSpace(btnC8);
+        }
+
+        private void btnC9_Click(object sender, EventArgs e)
+        {
+            CheckSpace(btnC9);
+        }
+
+        private void btnD1_Click(object sender, EventArgs e)
+        {
+            CheckSpace(btnD1);
+        }
+
+        private void btnD2_Click(object sender, EventArgs e)
+        {
+            CheckSpace(btnD2);
+        }
+
+        private void btnD3_Click(object sender, EventArgs e)
+        {
+            CheckSpace(btnD3);
+        }
+
+        private void btnD4_Click(object sender, EventArgs e)
+        {
+            CheckSpace(btnD4);
+        }
+
+        private void btnD5_Click(object sender, EventArgs e)
+        {
+            CheckSpace(btnD5);
+        }
+
+        private void btnD6_Click(object sender, EventArgs e)
+        {
+            CheckSpace(btnD6);
+        }
+
+        private void btnD7_Click(object sender, EventArgs e)
+        {
+            CheckSpace(btnD7);
+        }
+
+        private void btnD8_Click(object sender, EventArgs e)
+        {
+            CheckSpace(btnD8);
+        }
+
+        private void btnD9_Click(object sender, EventArgs e)
+        {
+            CheckSpace(btnD9);
+        }
+
+        private void btnE1_Click(object sender, EventArgs e)
+        {
+            CheckSpace(btnE1);
+        }
+
+        private void btnE2_Click(object sender, EventArgs e)
+        {
+            CheckSpace(btnE2);
+        }
+
+        private void btnE3_Click(object sender, EventArgs e)
+        {
+            CheckSpace(btnE3);
+        }
+
+        private void btnE4_Click(object sender, EventArgs e)
+        {
+            CheckSpace(btnE4);
+        }
+
+        private void btnE5_Click(object sender, EventArgs e)
+        {
+            CheckSpace(btnE5);
+        }
+
+        private void btnE6_Click(object sender, EventArgs e)
+        {
+            CheckSpace(btnE6);
+        }
+
+        private void btnE7_Click(object sender, EventArgs e)
+        {
+            CheckSpace(btnE7);
+        }
+
+        private void btnE8_Click(object sender, EventArgs e)
+        {
+            CheckSpace(btnE8);
+        }
+
+        private void btnE9_Click(object sender, EventArgs e)
+        {
+            CheckSpace(btnE9);
+        }
+
+        private void btnF1_Click(object sender, EventArgs e)
+        {
+            CheckSpace(btnF1);
+        }
+
+        private void btnF2_Click(object sender, EventArgs e)
+        {
+            CheckSpace(btnF2);
+        }
+
+        private void btnF3_Click(object sender, EventArgs e)
+        {
+            CheckSpace(btnF3);
+        }
+
+        private void btnF4_Click(object sender, EventArgs e)
+        {
+            CheckSpace(btnF4);
+        }
+
+        private void btnF5_Click(object sender, EventArgs e)
+        {
+            CheckSpace(btnF5);
+        }
+
+        private void btnF6_Click(object sender, EventArgs e)
+        {
+            CheckSpace(btnF6);
+        }
+
+        private void btnF7_Click(object sender, EventArgs e)
+        {
+            CheckSpace(btnF7);
+        }
+
+        private void btnF8_Click(object sender, EventArgs e)
+        {
+            CheckSpace(btnF8);
+        }
+
+        private void btnF9_Click(object sender, EventArgs e)
+        {
+            CheckSpace(btnF9);
+        }
+
+        private void btnG1_Click(object sender, EventArgs e)
+        {
+            CheckSpace(btnG1);
+        }
+
+        private void btnG2_Click(object sender, EventArgs e)
+        {
+            CheckSpace(btnG2);
+        }
+
+        private void btnG3_Click(object sender, EventArgs e)
+        {
+            CheckSpace(btnG3);
+        }
+
+        private void btnG4_Click(object sender, EventArgs e)
+        {
+            CheckSpace(btnG4);
+        }
+
+        private void btnG5_Click(object sender, EventArgs e)
+        {
+            CheckSpace(btnG5);
+        }
+
+        private void btnG6_Click(object sender, EventArgs e)
+        {
+            CheckSpace(btnG6);
+        }
+
+        private void btnG7_Click(object sender, EventArgs e)
+        {
+            CheckSpace(btnG7);
+        }
+
+        private void btnG8_Click(object sender, EventArgs e)
+        {
+            CheckSpace(btnG8);
+        }
+
+        private void btnG9_Click(object sender, EventArgs e)
+        {
+            CheckSpace(btnG9);
+        }
+
+        private void btnH1_Click(object sender, EventArgs e)
+        {
+            CheckSpace(btnH1);
+        }
+
+        private void btnH2_Click(object sender, EventArgs e)
+        {
+            CheckSpace(btnH2);
+        }
+
+        private void btnH3_Click(object sender, EventArgs e)
+        {
+            CheckSpace(btnH3);
+        }
+
+        private void btnH4_Click(object sender, EventArgs e)
+        {
+            CheckSpace(btnH4);
+        }
+
+        private void btnH5_Click(object sender, EventArgs e)
+        {
+            CheckSpace(btnH5);
+        }
+
+        private void btnH6_Click(object sender, EventArgs e)
+        {
+            CheckSpace(btnH6);
+        }
+
+        private void btnH7_Click(object sender, EventArgs e)
+        {
+            CheckSpace(btnH7);
+        }
+
+        private void btnH8_Click(object sender, EventArgs e)
+        {
+            CheckSpace(btnH8);
+        }
+
+        private void btnH9_Click(object sender, EventArgs e)
+        {
+            CheckSpace(btnH9);
+        }
+
+        private void btnI1_Click(object sender, EventArgs e)
+        {
+            CheckSpace(btnI1);
+        }
+
+        private void btnI2_Click(object sender, EventArgs e)
+        {
+            CheckSpace(btnI2);
+        }
+
+        private void btnI3_Click(object sender, EventArgs e)
+        {
+            CheckSpace(btnI3);
+        }
+
+        private void btnI4_Click(object sender, EventArgs e)
+        {
+            CheckSpace(btnI4);
+        }
+
+        private void btnI5_Click(object sender, EventArgs e)
+        {
+            CheckSpace(btnI5);
+        }
+
+        private void btnI6_Click(object sender, EventArgs e)
+        {
+            CheckSpace(btnI6);
+        }
+
+        private void btnI7_Click(object sender, EventArgs e)
+        {
+            CheckSpace(btnI7);
+        }
+
+        private void btnI8_Click(object sender, EventArgs e)
+        {
+            CheckSpace(btnI8);
+        }
+
+        private void btnI9_Click(object sender, EventArgs e)
+        {
+            CheckSpace(btnI9);
         }
     }
 }
