@@ -145,7 +145,6 @@ namespace Sudoku
                 btn.Enabled = true;
                 SetSelectedSpace("");
                 btn.BackColor = Color.White;
-
             }
         }
         private void btn1_Click(object sender, EventArgs e)
@@ -223,10 +222,43 @@ namespace Sudoku
         {
             CheckSpace(btnA1);
         }
-
         private void btnA2_Click(object sender, EventArgs e)
         {
             CheckSpace(btnA2);
+        }
+        private void btnA3_Click(object sender, EventArgs e)
+        {
+            CheckSpace(btnA3);
+        }
+
+        private void btnA4_Click(object sender, EventArgs e)
+        {
+            CheckSpace(btnA4);
+        }
+
+        private void btnA5_Click(object sender, EventArgs e)
+        {
+            CheckSpace(btnA5);
+        }
+
+        private void btnA6_Click(object sender, EventArgs e)
+        {
+            CheckSpace(btnA6);
+        }
+
+        private void btnA7_Click(object sender, EventArgs e)
+        {
+            CheckSpace(btnA7);
+        }
+
+        private void btnA8_Click(object sender, EventArgs e)
+        {
+            CheckSpace(btnA8);
+        }
+
+        private void btnA9_Click(object sender, EventArgs e)
+        {
+            CheckSpace(btnA9);
         }
     }
 }
