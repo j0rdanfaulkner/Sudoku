@@ -139,7 +139,7 @@ namespace Sudoku
             }
             else
             {
-                string buttonName = string.Format("btn{0}", _activeSpaceID);
+                string buttonName = _activeSpaceID;
                 Control btnSpace = FindSpace(buttonName);
                 btnSpace.Text = number;
                 btnSpace.Enabled = true;
@@ -191,7 +191,7 @@ namespace Sudoku
         {
             FillSpaceWithNumber("9");
         }
-        private void btnA1_Click(object sender, EventArgs e)
+        private void CheckSpace(Button btn)
         {
             if (_activeSpaceID != "")
             {
@@ -199,52 +199,33 @@ namespace Sudoku
             }
             else
             {
-                if (btnA1.Text != "")
+                if (btn.Text != "")
                 {
                     DialogResult result = MessageBox.Show("Are you sure you want to overwrite this space?", "Space Already Filled", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
                     if (result == DialogResult.Yes)
                     {
-                        btnA1.Text = "";
-                        SetSelectedSpace("A1");
-                        btnA1.BackColor = _activeSpaceBackColour;
-                        btnA1.Enabled = false;
+                        btn.Text = "";
+                        SetSelectedSpace(btn.Name);
+                        btn.BackColor = _activeSpaceBackColour;
+                        btn.Enabled = false;
                     }
                 }
                 else
                 {
-                    SetSelectedSpace("A1");
-                    btnA1.BackColor = _activeSpaceBackColour;
-                    btnA1.Enabled = false;
+                    SetSelectedSpace(btn.Name);
+                    btn.BackColor = _activeSpaceBackColour;
+                    btn.Enabled = false;
                 }
             }
+        }
+        private void btnA1_Click(object sender, EventArgs e)
+        {
+            CheckSpace(btnA1);
         }
 
         private void btnA2_Click(object sender, EventArgs e)
         {
-            if (_activeSpaceID != "")
-            {
-                MessageBox.Show("You are already filling another space", "Space Already Selected", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-            else
-            {
-                if (btnA2.Text != "")
-                {
-                    DialogResult result = MessageBox.Show("Are you sure you want to overwrite this space?", "Space Already Filled", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-                    if (result == DialogResult.Yes)
-                    {
-                        btnA2.Text = "";
-                        SetSelectedSpace("A2");
-                        btnA2.BackColor = _activeSpaceBackColour;
-                        btnA2.Enabled = false;
-                    }
-                }
-                else
-                {
-                    SetSelectedSpace("A2");
-                    btnA2.BackColor = _activeSpaceBackColour;
-                    btnA2.Enabled = false;
-                }
-            }
+            CheckSpace(btnA2);
         }
     }
 }
