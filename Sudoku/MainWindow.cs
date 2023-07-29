@@ -140,13 +140,14 @@ namespace Sudoku
             else
             {
                 string buttonName = _activeSpaceID;
-                Control btnSpace = FindSpace(buttonName);
-                btnSpace.Text = number;
-                btnSpace.Enabled = true;
+                Control btn = FindSpace(buttonName);
+                btn.Text = number;
+                btn.Enabled = true;
                 SetSelectedSpace("");
+                btn.BackColor = Color.White;
+
             }
         }
-
         private void btn1_Click(object sender, EventArgs e)
         {
             FillSpaceWithNumber("1");
