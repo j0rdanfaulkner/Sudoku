@@ -13,6 +13,7 @@ namespace Sudoku
         public MainWindow()
         {
             InitializeComponent();
+            MessageBox.Show("This is the initial release; more game boards will be added in time", "Not Fully Developed", MessageBoxButtons.OK, MessageBoxIcon.Information);
             StartGame();
         }
         public void StartGame()
@@ -735,9 +736,12 @@ namespace Sudoku
                 {
                     if (spaces[i, j].Text == board[i, j])
                     {
-                        spaces[i, j].BackColor = Color.DarkGreen;
-                        spaces[i, j].Enabled = false;
-                        _correctSpaces++;
+                        if (spaces[i, j].BackColor != _generatedSpace)
+                        {
+                            spaces[i, j].BackColor = Color.DarkGreen;
+                            spaces[i, j].Enabled = false;
+                            _correctSpaces++;
+                        }
                     }
                     else
                     {
@@ -745,7 +749,7 @@ namespace Sudoku
                     }
                 }
             }
-            string title = string.Format("{0} Correct Spaces", _correctSpaces); 
+            string title = string.Format("{0} Correct Spaces", _correctSpaces);
             string message = string.Format("You have correctly solved {0} spaces of the board", _correctSpaces);
             MessageBox.Show(message, title, MessageBoxButtons.OK, MessageBoxIcon.Information);
             _correctSpaces = 0;

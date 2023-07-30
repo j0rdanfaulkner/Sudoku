@@ -1629,6 +1629,7 @@
             Controls.Add(pnlContainer);
             Font = new Font("EurostileNextLTW04-UltLtEx", 20.25F, FontStyle.Regular, GraphicsUnit.Point);
             Icon = (Icon)resources.GetObject("$this.Icon");
+            MinimumSize = new Size(750, 784);
             Name = "MainWindow";
             Text = "Sudoku";
             pnlContainer.ResumeLayout(false);
