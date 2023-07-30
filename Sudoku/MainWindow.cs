@@ -1,3 +1,5 @@
+using System.Runtime.CompilerServices;
+
 namespace Sudoku
 {
     public partial class MainWindow : Form
@@ -7,6 +9,7 @@ namespace Sudoku
         private string _activeSpaceID = default!;
         private Button[,] spaces = new Button[9, 9];
         private string[,] board = new string[9, 9];
+        private int _correctSpaces = 0;
         public MainWindow()
         {
             InitializeComponent();
@@ -734,6 +737,7 @@ namespace Sudoku
                     {
                         spaces[i, j].BackColor = Color.DarkGreen;
                         spaces[i, j].Enabled = false;
+                        _correctSpaces++;
                     }
                     else
                     {
@@ -741,6 +745,10 @@ namespace Sudoku
                     }
                 }
             }
+            string title = string.Format("{0} Correct Spaces", _correctSpaces); 
+            string message = string.Format("You have correctly solved {0} spaces of the board", _correctSpaces);
+            MessageBox.Show(message, title, MessageBoxButtons.OK, MessageBoxIcon.Information);
+            _correctSpaces = 0;
         }
     }
 }
