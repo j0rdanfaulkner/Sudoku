@@ -1,3 +1,6 @@
+using Sudoku.Properties;
+using System.Drawing.Text;
+
 namespace Sudoku
 {
     public partial class MainWindow : Form
@@ -8,6 +11,8 @@ namespace Sudoku
         private Button[,] spaces = new Button[9, 9];
         private string[,] board = new string[9, 9];
         private int _correctSpaces = 0;
+        private PrivateFontCollection _pfc = new PrivateFontCollection();
+        private byte[] _fontdata;
         public MainWindow()
         {
             InitializeComponent();
@@ -17,8 +22,51 @@ namespace Sudoku
         public void StartGame()
         {
             CreateSpaces();
+            _pfc.AddFontFile(Path.Combine(Application.StartupPath + "\\Resources\\", "Eurostile Next LT W04 Ult Lt Ex.ttf"));
+            int i = 0;
+            Button btn = new Button();
+            for (i = 0; i < 9; i++)
+            {
+                switch (i)
+                {
+                    case 0:
+                        btn = btn1;
+                        break;
+                    case 1:
+                        btn = btn2;
+                        break;
+                    case 2:
+                        btn = btn3;
+                        break;
+                    case 3:
+                        btn = btn4;
+                        break;
+                    case 4:
+                        btn = btn5;
+                        break;
+                    case 5:
+                        btn = btn6;
+                        break;
+                    case 6:
+                        btn = btn7;
+                        break;
+                    case 7:
+                        btn = btn8;
+                        break;
+                    case 8:
+                        btn = btn9;
+                        break;
+                    default:
+                        break;
+                }
+                SetNumberButtons(btn);
+            }
             GenerateGame();
             _activeSpaceID = "";
+        }
+        private void SetNumberButtons(Button btn)
+        {
+            btn.Font = new Font(_pfc.Families[0], 20, FontStyle.Regular);
         }
         private void CreateSpaces()
         {
@@ -154,6 +202,7 @@ namespace Sudoku
                 {
                     if (board[i, j] != null)
                     {
+                        spaces[i, j].Font = new Font(_pfc.Families[0], 20, FontStyle.Regular);
                         spaces[i, j].BackColor = _generatedSpace;
                         spaces[i, j].Text = board[i, j];
                         spaces[i, j].Enabled = false;

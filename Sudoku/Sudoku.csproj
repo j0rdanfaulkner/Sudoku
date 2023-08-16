@@ -6,6 +6,228 @@
     <Nullable>enable</Nullable>
     <UseWindowsForms>true</UseWindowsForms>
     <ImplicitUsings>enable</ImplicitUsings>
+    <ApplicationIcon>icons8_table.ico</ApplicationIcon>
+    <Title>Sudoku</Title>
+    <Company>Jordan Faulkner</Company>
+    <Authors>Jordan Faulkner</Authors>
+    <Copyright>© 2023 Jordan Faulkner</Copyright>
+    <PackageProjectUrl>https://www.jordan-faulkner.com/sudoku</PackageProjectUrl>
+    <Description>My Sudoku program written in C#.</Description>
+    <PackageIcon>icon.png</PackageIcon>
+    <RepositoryUrl>https://github.com/j0rdanfaulkner/Sudoku</RepositoryUrl>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Resources\Eurostile Bold Extended.ttf" />
+    <None Remove="Resources\Eurostile Bold Oblique.ttf" />
+    <None Remove="Resources\Eurostile Bold.ttf" />
+    <None Remove="Resources\Eurostile Candy LT W04 Regular.ttf" />
+    <None Remove="Resources\Eurostile Candy LT W04 Semibold.ttf" />
+    <None Remove="Resources\Eurostile Condensed Bold.ttf" />
+    <None Remove="Resources\Eurostile Condensed.ttf" />
+    <None Remove="Resources\Eurostile Demi Oblique.ttf" />
+    <None Remove="Resources\Eurostile Italic.ttf" />
+    <None Remove="Resources\Eurostile LT Bold Oblique.ttf" />
+    <None Remove="Resources\Eurostile LT Bold.ttf" />
+    <None Remove="Resources\Eurostile LT Condensed.ttf" />
+    <None Remove="Resources\Eurostile LT Demi Oblique.ttf" />
+    <None Remove="Resources\Eurostile LT Demi.ttf" />
+    <None Remove="Resources\Eurostile LT Oblique.ttf" />
+    <None Remove="Resources\Eurostile LT Std Bold Condensed.ttf" />
+    <None Remove="Resources\Eurostile LT Std Bold Extended 2.ttf" />
+    <None Remove="Resources\Eurostile LT Std Bold Oblique.ttf" />
+    <None Remove="Resources\Eurostile LT Std Bold.ttf" />
+    <None Remove="Resources\Eurostile LT Std Condensed.ttf" />
+    <None Remove="Resources\Eurostile LT Std Demi Oblique.ttf" />
+    <None Remove="Resources\Eurostile LT Std Demi.ttf" />
+    <None Remove="Resources\Eurostile LT Std Extended 2.ttf" />
+    <None Remove="Resources\Eurostile LT Std Medium.ttf" />
+    <None Remove="Resources\Eurostile LT Std Oblique.ttf" />
+    <None Remove="Resources\Eurostile LT Std Roman.ttf" />
+    <None Remove="Resources\Eurostile LT W03 Bold Condensed.ttf" />
+    <None Remove="Resources\Eurostile LT W03 Bold Oblique.ttf" />
+    <None Remove="Resources\Eurostile LT W03 Condensed.ttf" />
+    <None Remove="Resources\Eurostile LT W03 Demi Oblique.ttf" />
+    <None Remove="Resources\Eurostile LT W03 Extended 2.ttf" />
+    <None Remove="Resources\Eurostile LT W03 Oblique.ttf" />
+    <None Remove="Resources\Eurostile LT W04 Bold Condensed.ttf" />
+    <None Remove="Resources\Eurostile LT W04 Bold Ext 2.ttf" />
+    <None Remove="Resources\Eurostile LT W04 Bold Oblique.ttf" />
+    <None Remove="Resources\Eurostile LT W04 Condensed.ttf" />
+    <None Remove="Resources\Eurostile LT W04 Demi Oblique.ttf" />
+    <None Remove="Resources\Eurostile LT W04 Oblique.ttf" />
+    <None Remove="Resources\Eurostile Next LT W04 Bold Cond.ttf" />
+    <None Remove="Resources\Eurostile Next LT W04 Ult Light.ttf" />
+    <None Remove="Resources\Eurostile Next LT W04 Ult Lt Ex.ttf" />
+    <None Remove="Resources\Eurostile Oblique.ttf" />
+    <None Remove="Resources\EurostileEF-Black.ttf" />
+    <None Remove="Resources\EurostileEF-Regular.ttf" />
+    <None Remove="Resources\EurostileLTStd-BoldOblique.ttf" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="icons8_table.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\Eurostile Bold Extended.ttf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Eurostile Bold Oblique.ttf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Eurostile Bold.ttf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Eurostile Candy LT W04 Regular.ttf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Eurostile Candy LT W04 Semibold.ttf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Eurostile Condensed Bold.ttf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Eurostile Condensed.ttf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Eurostile Demi Oblique.ttf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Eurostile Italic.ttf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Eurostile LT Bold Oblique.ttf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Eurostile LT Bold.ttf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Eurostile LT Condensed.ttf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Eurostile LT Demi Oblique.ttf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Eurostile LT Demi.ttf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Eurostile LT Oblique.ttf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Eurostile LT Std Bold Condensed.ttf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Eurostile LT Std Bold Extended 2.ttf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Eurostile LT Std Bold Oblique.ttf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Eurostile LT Std Bold.ttf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Eurostile LT Std Condensed.ttf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Eurostile LT Std Demi Oblique.ttf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Eurostile LT Std Demi.ttf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Eurostile LT Std Extended 2.ttf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Eurostile LT Std Medium.ttf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Eurostile LT Std Oblique.ttf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Eurostile LT Std Roman.ttf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Eurostile LT W03 Bold Condensed.ttf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Eurostile LT W03 Bold Oblique.ttf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Eurostile LT W03 Condensed.ttf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Eurostile LT W03 Demi Oblique.ttf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Eurostile LT W03 Extended 2.ttf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Eurostile LT W03 Oblique.ttf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Eurostile LT W04 Bold Condensed.ttf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Eurostile LT W04 Bold Ext 2.ttf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Eurostile LT W04 Bold Oblique.ttf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Eurostile LT W04 Condensed.ttf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Eurostile LT W04 Demi Oblique.ttf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Eurostile LT W04 Oblique.ttf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Eurostile Next LT W04 Bold Cond.ttf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Eurostile Next LT W04 Ult Light.ttf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Eurostile Next LT W04 Ult Lt Ex.ttf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Eurostile Oblique.ttf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\EurostileEF-Black.ttf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\EurostileEF-Regular.ttf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\EurostileLTStd-BoldOblique.ttf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\..\..\icon.png">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Properties\Resources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Properties\Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
 
 </Project>
