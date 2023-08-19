@@ -11,20 +11,20 @@ namespace Sudoku
         private Button[,] spaces = new Button[9, 9];
         private string[,] board = new string[9, 9];
         private int _correctSpaces = 0;
-        private PrivateFontCollection _pfc = new PrivateFontCollection();
-        private byte[] _fontdata;
+        PrivateFontCollection _pfc = new PrivateFontCollection();
         public MainWindow()
         {
             InitializeComponent();
             MessageBox.Show("This is the initial release; more game boards will be added in time", "Not Fully Developed", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            _pfc.AddFontFile(Path.Combine(Application.StartupPath, "Eurostile Next LT W04 Ult Lt Ex.ttf"));
             StartGame();
         }
         public void StartGame()
         {
             CreateSpaces();
-            _pfc.AddFontFile(Path.Combine(Application.StartupPath + "\\Resources\\", "Eurostile Next LT W04 Ult Lt Ex.ttf"));
-            int i = 0;
+            GenerateGame();
             Button btn = new Button();
+            int i = 0;
             for (i = 0; i < 9; i++)
             {
                 switch (i)
@@ -59,14 +59,9 @@ namespace Sudoku
                     default:
                         break;
                 }
-                SetNumberButtons(btn);
+                btn.Font = new Font(_pfc.Families[0], 20, FontStyle.Regular);
             }
-            GenerateGame();
             _activeSpaceID = "";
-        }
-        private void SetNumberButtons(Button btn)
-        {
-            btn.Font = new Font(_pfc.Families[0], 20, FontStyle.Regular);
         }
         private void CreateSpaces()
         {
