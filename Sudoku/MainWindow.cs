@@ -16,7 +16,7 @@ namespace Sudoku
         {
             InitializeComponent();
             MessageBox.Show("This is the initial release; more game boards will be added in time", "Not Fully Developed", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            _pfc.AddFontFile(Path.Combine(Application.StartupPath, "Eurostile Next LT W04 Ult Lt Ex.ttf"));
+            _pfc.AddFontFile(Path.Combine(Application.StartupPath + "\\Resources\\", "Eurostile Next LT W04 Ult Lt Ex.ttf"));
             StartGame();
         }
         public void StartGame()
